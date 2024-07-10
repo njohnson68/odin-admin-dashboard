@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: white;
+}
+
+.dashboard-icon {
+  grid-area: dashboard-icon;
+  height: 3rem;
+  width: 3rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.home-icon {
+  grid-area: home-icon;
+}
+
+.profile-icon {
+  grid-area: profile-icon;
+}
+
+.message-icon {
+  grid-area: message-icon;
+}
+
+.history-icon {
+  grid-area: history-icon;
+}
+
+.tasks-icon {
+  grid-area: tasks-icon;
+}
+
+.communities-icon {
+  grid-area: communities-icon;
+}
+
+.settings-icon {
+  grid-area: settings-icon;
+}
+
+.support-icon {
+  grid-area: support-icon;
+}
+
+.privacy-icon {
+  grid-area: privacy-icon;
+}
+
+.dashboard {
+  grid-area: dashboard;
+  font-size: 1.6rem;
+}
+
+.home {
+  grid-area: home;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.message {
+  grid-area: message;
+}
+
+.history {
+  grid-area: history;
+}
+
+.tasks {
+  grid-area: tasks;
+}
+
+.communities {
+  grid-area: communities;
+}
+
+.settings {
+  grid-area: settings;
+}
+
+.support {
+  grid-area: support;
+}
+
+.privacy {
+  grid-area: privacy;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-area: dashboard-container;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "dashboard-icon dashboard";
+}
+
+.top-nav-container {
+  grid-area: top-nav-container;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "home-icon home"
+    "profile-icon profile"
+    "message-icon message"
+    "history-icon history"
+    "tasks-icon tasks"
+    "communities-icon communities";
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-nav-container {
+  grid-area: bottom-nav-container;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "settings-icon settings"
+    "support-icon support"
+    "privacy-icon privacy";
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  grid-template-areas:
+    "dashboard-container"
+    "top-nav-container"
+    "bottom-nav-container";
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  color: white;
+}
+
+aside svg {
+  fill: white;
+}
+
+.top-nav-container svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 2rem;
+}
+
+.bottom-nav-container svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 2rem;
+}
+
+.top-nav-container p {
+  font-size: 1.25rem;
+}
+
+.bottom-nav-container p {
+  font-size: 1.25rem;
+}
+
+main {
+  grid-area: main;
+  background-color: #e5e7eb;
+}
