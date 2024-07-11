@@ -191,6 +191,11 @@ aside svg {
 
 main {
   grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "projects-container announcements-container"
+    "projects-container trending-container";
   background-color: #e5e7eb;
 }
 
@@ -301,4 +306,57 @@ main {
 
 .share {
   grid-area: share;
+}
+
+.projects-container {
+  grid-area: projects-container;
+  display: grid;
+  grid-template-areas:
+    "your-projects ."
+    "super-cool-project less-cool-project"
+    "impossible-app easy-peasy-app"
+    "ad-blocker money-maker";
+  gap: 1rem;
+}
+
+.your-projects {
+  grid-area: your-projects;
+}
+
+.announcements-container {
+  grid-area: annoucements-container;
+}
+
+.trending-container {
+  grid-area: trending-container;
+}
+
+.super-cool-project {
+  grid-area: super-cool-project;
+}
+
+.less-cool-project {
+  grid-area: less-cool-project;
+}
+
+.impossible-app {
+  grid-area: impossible-app;
+}
+
+.easy-peasy-app {
+  grid-area: easy-peasy-app;
+}
+
+.ad-blocker {
+  grid-area: ad-blocker;
+}
+
+.money-maker {
+  grid-area: money-maker;
+}
+
+.projects-container div {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 3px lightgray;
 }
