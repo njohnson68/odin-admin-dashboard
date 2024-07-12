@@ -192,7 +192,7 @@ aside svg {
 main {
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-areas:
     "projects-container announcements-container"
     "projects-container trending-container";
@@ -317,18 +317,28 @@ main {
     "impossible-app easy-peasy-app"
     "ad-blocker money-maker";
   gap: 1rem;
+  margin-left: 1rem;
 }
 
 .your-projects {
   grid-area: your-projects;
+  font-weight: bold;
 }
 
 .announcements-container {
-  grid-area: annoucements-container;
+  grid-area: announcements-container;
+  display: grid;
+  grid-template-areas:
+    "announcements"
+    "announcements-div";
 }
 
 .trending-container {
   grid-area: trending-container;
+  display: grid;
+  grid-template-areas:
+    "trending"
+    "trending-div";
 }
 
 .super-cool-project {
@@ -359,4 +369,76 @@ main {
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 3px lightgray;
+  background-image: linear-gradient(to right, gold 3%, rgba(0, 0, 0, 0) 3%);
+}
+
+.announcements {
+  grid-area: announcements;
+  font-weight: bold;
+}
+
+.trending {
+  grid-area: trending;
+}
+
+.announcements-div {
+  grid-area: announcements-div;
+  display: grid;
+  grid-template-areas:
+    "site-maint"
+    "site-maint-lorem"
+    "community-share-day"
+    "community-share-lorem"
+    "updated-privacy-policy"
+    "updated-lorem";
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 3px lightgray;
+}
+
+.trending-div {
+  grid-area: trending-div;
+}
+
+.projects-container [class*="-text"] {
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.projects-container [class*="-lorem"] {
+  color: grey;
+  margin-left: 2rem;
+}
+
+.site-maint {
+  font-weight: bold;
+  grid-area: site-maint;
+}
+
+.community-share-day {
+  font-weight: bold;
+  grid-area: community-share-day;
+}
+
+.updated-privacy-policy {
+  font-weight: bold;
+  grid-area: updated-privacy-policy;
+}
+
+.announcements-container [class*="-lorem"] {
+  color: grey;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.site-maint-lorem {
+  grid-area: site-maint-lorem;
+}
+
+.community-share-lorem {
+  grid-area: community-share-lorem;
+}
+
+.updated-lorem {
+  grid-area: updated-lorem;
 }
